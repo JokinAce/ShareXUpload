@@ -1,19 +1,14 @@
-namespace ShareXUpload {
-
-    public class ShareXInput {
-        public string Secret { get; set; }
-    }
-
+namespace ShareXUpload.Models {
     public struct ShareXOutput {
 
-        public ShareXOutput(string Status, string Errormsg, string Url = "") {
-            this.Status = Status;
-            this.Errormsg = Errormsg;
-            this.Url = Url;
+        public ShareXOutput(string status, string errorMsg, string url = "") {
+            this.Status = status;
+            this.Errormsg = errorMsg;
+            this.Url = url;
         }
 
-        public string Status { get; set; }
-        public string Errormsg { get; set; }
-        public string Url { get; set; }
+        public string Status { get; }
+        public string Errormsg { get; }
+        public string Url { get; }
     }
 }
